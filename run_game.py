@@ -55,7 +55,7 @@ def parse_args():
                         help="Seed")
     parser.add_argument("--lane_count", type=int, default=4,
                         help="Number of lanes in the highway")
-    parser.add_argument("--t_max", type=int, default=10,
+    parser.add_argument("--t_max", type=int, default=5,
                         help="Maximum score")
     parser.add_argument("--dqn_temp", type=int, default=0.6,
                         help="Maximum score")
