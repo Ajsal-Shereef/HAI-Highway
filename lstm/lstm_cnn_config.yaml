@@ -1,0 +1,40 @@
+REWARD_LEARNING:
+    size : 300
+    feature_size : 26
+    input_size : 25
+    n_actions : 5
+    action_embedding_dim : 25
+    return_scaling : 1
+    continuous_pred_factor : 0.10
+    batch_size : 5000
+    n_units : 64
+    n_layers : 1 #This is number of LSTM layers
+    early_stopping_patience : 9
+    n_update : 2000
+    rudder_log_dir : "log/rudder"
+    episode_delay_rudder : 1
+    save_trajectory : False
+    max_num_traj : 100
+    pretrain : False
+    plot_internals : True
+    is_lstm : True
+    is_cnn_encoding : True #Don't forgot to change the value in run_game.py as well
+    is_FiLM : True
+    is_feedback_binary : False
+    is_load_lstm : True
+    model_dir : "Result/2023-11-29_20-03-51_7CW0U3/lstm_64.tar"
+MLP:
+    fc_hidden_sizes : [32]
+    embed_size : 32
+Optim:
+    lstm_lr : 0.0001
+    cnn_lr : 0.001
+    l2_regularization : 1.0e-6
+    adam_eps : 0.000001
+TRANSFORMER:
+    observation_size : 8
+    action_size : 0
+    embedding_size : 32
+    dim_feedforward : 128
+    pad_val : 0
+    max_len : 10
